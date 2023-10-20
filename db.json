@@ -1,0 +1,57 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "alumni": [
+    {
+      "firstName": "john",
+      "lastName": "doe",
+      "email": "john@gmail.com",
+      "dob": "1997-12-31T16:00:00.000Z",
+      "gender": "male",
+      "education": "Post Graduate",
+      "company": "Googol",
+      "experience": 4,
+      "package": 12,
+      "id": 1
+    },
+    {
+      "firstName": "asd",
+      "lastName": "sdg",
+      "email": "fdsag@gmail.com",
+      "dob": "2023-10-10T16:00:00.000Z",
+      "gender": "",
+      "education": "Diploma",
+      "company": "51fzc",
+      "experience": 123,
+      "package": 14,
+      "id": 2
+    },
+    {
+      "firstName": "sa",
+      "lastName": "sad",
+      "email": "ga@ggd.cj",
+      "dob": "2023-10-01T16:00:00.000Z",
+      "gender": "female",
+      "education": "Matric",
+      "company": "saf",
+      "experience": 123,
+      "package": 144,
+      "id": 3
+    }
+  ]
+}
