@@ -18,7 +18,7 @@
   },
   "alumni": [
     {
-      "firstName": "john",
+      "firstName": "testting",
       "lastName": "doe",
       "email": "john@gmail.com",
       "dob": "1997-12-31T16:00:00.000Z",
@@ -52,6 +52,18 @@
       "experience": 123,
       "package": 144,
       "id": 3
+    },
+    {
+      "firstName": "jason",
+      "lastName": "doe",
+      "email": "john@gmail.com",
+      "dob": "1997-12-31T16:00:00.000Z",
+      "gender": "male",
+      "education": "Post Graduate",
+      "company": "pacedbook",
+      "experience": 4,
+      "package": 12,
+      "id": 4
     }
   ]
 }

@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AlumniService } from '../services/alumni.service';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-data-add-edit',
   templateUrl: './data-add-edit.component.html',
   styleUrls: ['./data-add-edit.component.scss']
 })
-export class DataAddEditComponent {
+export class DataAddEditComponent implements OnInit {
   dataForm: FormGroup;
 
   education: string[] = [
@@ -22,7 +23,9 @@ export class DataAddEditComponent {
   constructor(
     private _fb: FormBuilder,
     private _alumniService: AlumniService,
-    private _dialogRef: MatDialogRef<DataAddEditComponent>
+    private _dialogRef: MatDialogRef<DataAddEditComponent>,
+    private _coreService: CoreService,
+    @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.dataForm = this._fb.group({
       firstName: '',
@@ -37,17 +40,33 @@ export class DataAddEditComponent {
     });
   }
 
+  ngOnInit(): void {
+    this.dataForm.patchValue(this.data);
+  }
+
   onFormSubmit() {
     if (this.dataForm.valid) {
-      this._alumniService.addAlumi(this.dataForm.value).subscribe({
-        next: (val: any) => {
-          alert('Employee added successfully');
-          this._dialogRef.close(true);
-        },
-        error: (err: any) => {
-          console.error(err);
-        },
-      })
+      if (this.data) {
+        this._alumniService.updateAlumi(this.data.id, this.dataForm.value).subscribe({
+          next: (val: any) => {
+            this._coreService.openSnackBar('Alumni updated successfully', 'OK')
+            this._dialogRef.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          },
+        })
+      } else {
+        this._alumniService.addAlumi(this.dataForm.value).subscribe({
+          next: (val: any) => {
+            this._coreService.openSnackBar('Alumni added successfully', 'OK')
+            this._dialogRef.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          },
+        })
+      }
     }
   }
 }

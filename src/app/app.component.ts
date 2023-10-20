@@ -7,6 +7,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CoreService } from './core/core.service';
 
 @Component({
   selector: 'app-root',
@@ -35,7 +36,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     private _dialog: MatDialog,
-    private _alumniService: AlumniService
+    private _alumniService: AlumniService,
+    private _coreService: CoreService,
   ) { }
 
   ngOnInit(): void {
@@ -78,10 +80,23 @@ export class AppComponent implements OnInit {
   deleteAlumni(id: number) {
     this._alumniService.deleteAlumni(id).subscribe({
       next: (res) => {
-        alert('Alumni deleted successfully');
+        this._coreService.openSnackBar('Alumni deleted successfully', 'OK')
         this.getAlumniList();
       },
       error: console.log,
+    })
+  }
+
+  openEditDataForm(data: any) {
+    const dialogRef = this._dialog.open(DataAddEditComponent, {
+      data: data
+    });
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if (val) {
+          this.getAlumniList();
+        }
+      }
     })
   }
 }

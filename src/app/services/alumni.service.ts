@@ -13,6 +13,10 @@ export class AlumniService {
     return this._http.post('http://localhost:3000/alumni', data);
   }
 
+  updateAlumi(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/alumni/${id}`, data);
+  }
+  
   getAlumniList(): Observable<any> {
     return this._http.get('http://localhost:3000/alumni');
   }
