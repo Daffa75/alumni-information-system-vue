@@ -21,11 +21,16 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DirectoryComponent } from './directory/directory.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataAddEditComponent
+    DataAddEditComponent,
+    DirectoryComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +52,11 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatPaginatorModule,
     MatSortModule,
     MatSnackBarModule,
+    MatSidenavModule,
+    MatListModule,
+    RouterModule.forRoot([
+      {path: 'direktori', component: DirectoryComponent},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
