@@ -18,52 +18,28 @@
   },
   "alumni": [
     {
-      "firstName": "testting",
-      "lastName": "doe",
-      "email": "john@gmail.com",
-      "dob": "1997-12-31T16:00:00.000Z",
-      "gender": "male",
-      "education": "Post Graduate",
-      "company": "Googol",
-      "experience": 4,
-      "package": 12,
+      "firstName": "wrsadf",
+      "lastName": "sdg",
+      "email": "",
+      "dob": "",
+      "gender": "",
+      "education": "Matric",
+      "company": "sdg",
+      "experience": 324,
+      "package": 234,
       "id": 1
     },
     {
-      "firstName": "asd",
-      "lastName": "sdg",
-      "email": "fdsag@gmail.com",
-      "dob": "2023-10-10T16:00:00.000Z",
+      "firstName": "jhon",
+      "lastName": "adsd",
+      "email": "",
+      "dob": "",
       "gender": "",
       "education": "Diploma",
-      "company": "51fzc",
-      "experience": 123,
-      "package": 14,
+      "company": "",
+      "experience": 34,
+      "package": 4234,
       "id": 2
-    },
-    {
-      "firstName": "sa",
-      "lastName": "sad",
-      "email": "ga@ggd.cj",
-      "dob": "2023-10-01T16:00:00.000Z",
-      "gender": "female",
-      "education": "Matric",
-      "company": "saf",
-      "experience": 123,
-      "package": 144,
-      "id": 3
-    },
-    {
-      "firstName": "jason",
-      "lastName": "doe",
-      "email": "john@gmail.com",
-      "dob": "1997-12-31T16:00:00.000Z",
-      "gender": "male",
-      "education": "Post Graduate",
-      "company": "pacedbook",
-      "experience": 4,
-      "package": 12,
-      "id": 4
     }
   ]
 }

@@ -4,22 +4,19 @@
   </button>
   <span>Alumni Data Collection</span>
   <span class="example-spacer"></span>
-  <button mat-raised-button (click)="openAddEditDataForm()">
-    Add Data
-  </button>
-  <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button> -->
 </mat-toolbar>
 
 <div class="main-body">
-  <mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-  </mat-form-field>
+  <div class="row header">
+    <button mat-raised-button (click)="openAddEditDataForm()" color="primary">
+      + Add Data
+    </button>
+    <mat-form-field appearance="outline" color="primary">
+      <mat-label>Search</mat-label>
+      <input type="search" matInput (keyup)="applyFilter($event)" #input>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
 
   <div class="table-container">
     <table mat-table [dataSource]="dataSource" matSort>

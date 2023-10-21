@@ -6,7 +6,10 @@
   padding-top: 20px;
   margin: 0 auto;
   max-width: 1248px;
-  mat-form-field {
-    width: 100%;
-  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
