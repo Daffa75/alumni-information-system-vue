@@ -46,23 +46,14 @@
   /* Hide overflowing content */
 }
 
-.mat-column-id {
-  width: 10px;
-}
-
-mat-header-cell {
-  text-align: center;
-}
-
-.mat-column-tahunMasuk {
-  text-align: center;
-  width: 100px;
-}
-
-
 // .footer {
 
 // }
+
+td.mat-column-action {
+  width: 20px;
+  padding-right: 8px;
+}
 
 th.mat-column-position,
 td.mat-column-position {

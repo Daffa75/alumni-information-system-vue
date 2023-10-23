@@ -1,4 +1,4 @@
-import { Component, ViewChild, inject } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -13,11 +13,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { CoreService } from '../core/core.service';
 
 @Component({
-  selector: 'app-directory',
-  templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.scss']
+  selector: 'app-alumni-list',
+  templateUrl: './alumni-list.component.html',
+  styleUrls: ['./alumni-list.component.scss']
 })
-export class DirectoryComponent {
+export class AlumniListComponent {
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -27,11 +27,20 @@ export class DirectoryComponent {
     );
 
   displayedColumns: string[] = [
-    'id',
     'namaLengkap',
+    'namaPanggilan',
+    'jenisKelamin',
+    'agama',
+    'email',
+    'dob',
+    'alamat',
     'fakultas',
     'tahunMasuk',
+    'sektorUsaha',
     'jabatan',
+    'namaKantor',
+    'alamatKantor',
+    'action'
   ];
 
   dataSource!: MatTableDataSource<any>;

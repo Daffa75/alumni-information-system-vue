@@ -25,12 +25,14 @@ import { DirectoryComponent } from './directory/directory.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
+import { AlumniListComponent } from './alumni-list/alumni-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataAddEditComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    AlumniListComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,9 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatListModule,
     RouterModule.forRoot([
+      {path: '', component: DirectoryComponent},
       {path: 'direktori', component: DirectoryComponent},
+      {path: 'alumni-list', component: AlumniListComponent},
     ]),
   ],
   providers: [],

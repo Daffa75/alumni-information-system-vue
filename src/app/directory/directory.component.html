@@ -7,9 +7,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"></a>
-      <a mat-list-item href="#"></a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="/direktori">Home</a>
+      <a mat-list-item href="/alumni-list">Data Collection</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,9 +21,63 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>alumni-information-system</span>
+      <span>Alumni List</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+
+    <div class="main-body">
+      <div class="row header">
+        <mat-form-field color="primary">
+          <mat-label>Search</mat-label>
+          <input type="search" matInput (keyup)="applyFilter($event)" #input>
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
+    
+      <div class="table-container">
+        <table mat-table [dataSource]="dataSource" matSort>
+    
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="namaLengkap">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nama Lengkap </th>
+            <td mat-cell *matCellDef="let row"> {{row.namaLengkap}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="fakultas">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Fakultas </th>
+            <td mat-cell *matCellDef="let row"> {{row.fakultas}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="tahunMasuk">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Tahun Masuk </th>
+            <td mat-cell *matCellDef="let row"> {{row.tahunMasuk}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="jabatan">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Pekerjaan </th>
+            <td mat-cell *matCellDef="let row"> {{row.jabatan}} {{row.namaKantor}} </td>
+          </ng-container>
+    
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+          </tr>
+        </table>
+    
+      </div>
+      <div class="footer">
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+    
+    </div>
+
   </mat-sidenav-content>
 </mat-sidenav-container>
 
