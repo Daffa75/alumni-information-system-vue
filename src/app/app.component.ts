@@ -17,18 +17,22 @@ import { CoreService } from './core/core.service';
 export class AppComponent implements OnInit {
 
   displayedColumns: string[] = [
-    'id',
-    'firstName',
-    'lastName',
+    'namaLengkap',
+    'namaPanggilan',
+    'jenisKelamin',
+    'agama',
     'email',
     'dob',
-    'gender',
-    'education',
-    'company',
-    'experience',
-    'package',
+    'alamat',
+    'fakultas',
+    'tahunMasuk',
+    'sektorUsaha',
+    'jabatan',
+    'namaKantor',
+    'alamatKantor',
     'action'
   ];
+
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

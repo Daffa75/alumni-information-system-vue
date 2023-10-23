@@ -18,28 +18,20 @@
   },
   "alumni": [
     {
-      "firstName": "wrsadf",
-      "lastName": "sdg",
-      "email": "",
-      "dob": "",
-      "gender": "",
-      "education": "Matric",
-      "company": "sdg",
-      "experience": 324,
-      "package": 234,
+      "namaLengkap": "Andi Muh. Daffa",
+      "namaPanggilan": "Daffa",
+      "jenisKelamin": "Laki-laki",
+      "agama": "Islam",
+      "email": "andidaffa75@gmail.com",
+      "dob": "2004-02-19T16:00:00.000Z",
+      "alamat": "Makassar",
+      "fakultas": "Fakultas Teknik",
+      "tahunMasuk": 2021,
+      "sektorUsaha": "Perdagangan",
+      "jabatan": "CEO",
+      "namaKantor": "Toko 75",
+      "alamatKantor": "Parepare",
       "id": 1
-    },
-    {
-      "firstName": "jhon",
-      "lastName": "adsd",
-      "email": "",
-      "dob": "",
-      "gender": "",
-      "education": "Diploma",
-      "company": "",
-      "experience": 34,
-      "package": 4234,
-      "id": 2
     }
   ]
 }

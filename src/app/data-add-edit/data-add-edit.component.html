@@ -7,21 +7,47 @@
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Nama Lengkap</mat-label>
-                <input matInput placeholder="" formControlName="firstName">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Nama Panggilan</mat-label>
-                <input matInput placeholder="" formControlName="lastName">
+                <input matInput placeholder="" formControlName="namaLengkap">
             </mat-form-field>
         </div>
 
         <div class="row">
             <mat-form-field appearance="outline">
+                <mat-label>Nama Panggilan</mat-label>
+                <input matInput placeholder="" formControlName="namaPanggilan">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Jenis Kelamin</mat-label>
+                <mat-select formControlName="jenisKelamin">
+                    <mat-option *ngFor="let val of jenisKelamin" [value]="val">
+                        {{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Agama</mat-label>
+                <mat-select formControlName="agama">
+                    <mat-option *ngFor="let val of agama" [value]="val">
+                        {{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
                 <input matInput type="email" placeholder="ex. john@gmail.com" formControlName="email">
             </mat-form-field>
+        </div>
+
+        <div class="row">
             <mat-form-field appearance="outline">
-                <mat-label>Date of Birth</mat-label>
+                <mat-label>Tempat Lahir</mat-label>
+                <input matInput placeholder="" formControlName="tempatLahir">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Tanggal Lahir</mat-label>
                 <input matInput [matDatepicker]="picker" formControlName="dob">
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -29,39 +55,58 @@
             </mat-form-field>
         </div>
 
-        <!-- <div class="row">
-        <mat-radio-group aria-label="Select an option" formControlName="gender">
-            <mat-label><b>Gender</b></mat-label>
-            <mat-radio-button value="male">Male</mat-radio-button>
-            <mat-radio-button value="female">Female</mat-radio-button>
-            <mat-radio-button value="bird">Bird</mat-radio-button>
-          </mat-radio-group>          
-    </div> -->
-
         <div class="row">
             <mat-form-field appearance="outline">
-                <mat-label>Education</mat-label>
-                <mat-select formControlName="education">
-                    <mat-option *ngFor="let val of education" [value]="val">
+                <mat-label>Alamat</mat-label>
+                <textarea matInput placeholder="" formControlName="alamat"></textarea>
+            </mat-form-field>
+        </div>
+        
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Fakultas</mat-label>
+                <mat-select formControlName="fakultas">
+                    <mat-option *ngFor="let val of fakultas" [value]="val">
                         {{val}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-form-field appearance="outline">
-                <mat-label>Company</mat-label>
-                <input matInput placeholder="ex. Google" formControlName="company">
+                <mat-label>Tahun Masuk</mat-label>
+                <input matInput type="number" placeholder="" formControlName="tahunMasuk">
+            </mat-form-field>
+        </div>
+        
+        <div class="row">
+            <h3>Identitas Pekerjaan</h3>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Sektor Usaha</mat-label>
+                <mat-select formControlName="sektorUsaha">
+                    <mat-option *ngFor="let val of usaha" [value]="val">
+                        {{val}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Jabatan</mat-label>
+                <input matInput placeholder="" formControlName="jabatan">
             </mat-form-field>
         </div>
 
         <div class="row">
             <mat-form-field appearance="outline">
-                <mat-label>Experience</mat-label>
-                <input matInput placeholder="ex. 4" type="number" formControlName="experience">
+                <mat-label>Nama Kantor</mat-label>
+                <input matInput placeholder="" formControlName="namaKantor">
             </mat-form-field>
+        </div>
+
+        <div class="row">
             <mat-form-field appearance="outline">
-                <mat-label>Package</mat-label>
-                <input matInput placeholder="ex. 12" type="number" formControlName="package">
-                <mat-hint>in rupiah</mat-hint>
+                <mat-label>Alamat Kantor</mat-label>
+                <textarea matInput placeholder="" formControlName="alamatKantor"></textarea>
             </mat-form-field>
         </div>
     </div>

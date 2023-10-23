@@ -13,3 +13,30 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table-container td,.table-container th{
+  white-space: nowrap; /* Prevent text wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for overflowing text */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+// .footer {
+  
+// }
+
+td.mat-column-action {
+  width: 20px;
+  padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+  padding-left: 8px;
+}
+
+.mat-mdc-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}

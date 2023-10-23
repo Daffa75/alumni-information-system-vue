@@ -6,12 +6,26 @@
     display: flex;
     gap: 10px;
     
+    width: 800px;
+
     mat-form-field {
         width: 100%;
+    }
+
+    h3 {
+        margin: 15px auto;
     }
 }
 
 .action {
     padding: 0 25px 20px;
     justify-content: end;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-40 {
+    width: 40%;
 }

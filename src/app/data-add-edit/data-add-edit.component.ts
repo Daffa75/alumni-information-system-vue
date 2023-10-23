@@ -12,12 +12,65 @@ import { CoreService } from '../core/core.service';
 export class DataAddEditComponent implements OnInit {
   dataForm: FormGroup;
 
-  education: string[] = [
-    'Matric',
-    'Diploma',
-    'Intermediate',
-    'Graduate',
-    'Post Graduate',
+  jenisKelamin: string[] = [
+    'Laki-laki',
+    'Perempuan',
+  ]
+
+  agama: string[] = [
+    'Islam',
+    'Kristen',
+    'Katolik',
+    'Hindu',
+    'Budha',
+    'Khonghucu',
+    'Kepercayaan kepada Tuhan YME',
+  ]
+
+  fakultas: string[] = [
+    'Fakultas Ekonomi dan Bisnis',
+    'Fakultas Hukum',
+    'Fakultas Kedokteran',
+    'Fakultas Teknik',
+    'Fakultas Ilmu Sosial dan Ilmu Politik',
+    'Fakultas Ilmu Budaya',
+    'Fakultas Pertanian',
+    'Fakultas Matematika dan Ilmu Pengetahuan Alam',
+    'Fakultas Peternakan',
+    'Fakultas Kedokteran Gigi',
+    'Fakultas Kesehatan Masyarakat',
+    'Fakultas Ilmu Kelautan dan Perikanan',
+    'Fakultas Kehutanan',
+    'Fakultas Farmasi',
+    'Sekolah Pascasarjana',
+    'Fakultas Keperawatan',
+  ]
+
+  usaha: string[] = [
+    'Pemerintahan',
+    'Perbankan',
+    'Perindustrian',
+    'Perdagangan',
+    'Pertambangan/Energi',
+    'Perhubungan',
+    'Pertanian',
+    'Peternakan',
+    'Perikanan',
+    'Dokter',
+    'Pengacara',
+    'Notaris',
+    'Pendidikan',
+    'TNI',
+    'Polri',
+    'Konsultan',
+    'Media',
+    'Advertising',
+    'Kehutanan',
+    'Pariwisata',
+    'Seni',
+    'Kuliner',
+    'Event organizer',
+    'Ibu rumah tangga'
   ]
 
   constructor(
@@ -28,15 +81,19 @@ export class DataAddEditComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.dataForm = this._fb.group({
-      firstName: '',
-      lastName: '',
+      namaLengkap: '',
+      namaPanggilan: '',
+      jenisKelamin: '',
+      agama: '',
       email: '',
       dob: '',
-      gender: '',
-      education: '',
-      company: '',
-      experience: '',
-      package: '',
+      alamat: '',
+      fakultas: '',
+      tahunMasuk: '',
+      sektorUsaha: '',
+      jabatan: '',
+      namaKantor: '',
+      alamatKantor: '',
     });
   }
 
