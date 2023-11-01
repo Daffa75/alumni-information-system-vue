@@ -96,6 +96,22 @@
       "namaKantor": "TechPro",
       "alamatKantor": "Bandung",
       "id": 5
+    },
+    {
+      "namaLengkap": "John Doe",
+      "namaPanggilan": "John",
+      "jenisKelamin": "Laki-laki",
+      "agama": "Islam",
+      "email": "john@example.com",
+      "dob": "1990-01-01T00:00:00.000Z",
+      "alamat": "Jl. Contoh No. 123",
+      "fakultas": "Fakultas Teknik",
+      "tahunMasuk": 2010,
+      "sektorUsaha": "Pemerintahan",
+      "jabatan": "Pegawai Negeri Sipil",
+      "namaKantor": "Pemerintah Provinsi DKI Jakarta",
+      "alamatKantor": "Jl. Kantor No. 456",
+      "id": 6
     }
   ]
 }
